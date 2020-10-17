@@ -6,7 +6,7 @@ body, html {
 
 .parallax {
   /* The image used */
-  background-image: url("images/v3.png");
+  
 
   /* Full height */
   height: 100%;
@@ -31,9 +31,25 @@ body, html {
   
   
 }
+
+@media screen and (min-width: 801px) {
+  li ,#social_text{
+    font-size: 35px;
+  }
+
+
+}
+
+@media screen and (max-width: 800px) {
+  li ,#social_text {
+    font-size: 23px;
+	
+  }
+}
 .parallax2 {
   /* The image used */
-  background-image: url("images/rect815.png");
+  background-image: url("images/footer-bg.png");
+  min-height: 400px
 
   /* Full height */
   height: 100%;
@@ -58,20 +74,21 @@ body, html {
   width: 50%;
 }
 .first {
-	color: #777;background-color:white;text-align:center;padding:50px 50px;text-align: justify;
+	color: #777;background-color:white;text-align:center;padding:20px 50px;text-align: justify;
 	font-family: 'Cantora One';font-size: 30px;
 	
 }
 
 li{
-	font-family: 'Architects Daughter';font-size: 35px;
+	font-family: 'Architects Daughter';
 	padding:0;
 	
 }
 
-.varn_text{
+#varn_text{
 	
-	font-family: 'Courgette';font-size: 32px;
+	font-family: 'Rock Salt'; 
+	font-size: 20px;
 }
 
 #controller_icon,#brush_icon,#palette_icon,#music_icon,#cube_icon{
@@ -82,12 +99,17 @@ li{
 	
 }
 
+.upper_text{
+
+	margin: 0px;
+}
 
 ul#horizontal-list {
 	display: grid;
     grid-template-columns: repeat(2, 1fr);
 	list-style-type: none;
 	padding: 0px;
+	margin: 0px;
 	}
 
 li:hover {
@@ -172,24 +194,63 @@ a{
 	text-decoration: none;
 }
 
-.round_Button{
+a:active{
 
-max-width: 35%;
+	color:black;
+}
+
+a:visited{
+
+	color:none;
+}
+
+@media screen and (min-width: 801px) {
+
+	.round_Button, .round_Button2{
+
+		width: 30%;
+	}
+
+	#social_text,#gallery_text,#blog_text{
+
+		font-size: 45px;
+	}
 
 }
 
-.round_Button2{
+@media screen and (max-width: 800px) {
 
-max-width: 35%;
+
+	.round_Button, .round_Button2{
+
+		width: 60%;
+	}
+
+	#social_text,#gallery_text,#blog_text{
+
+		font-size: 30px;
+	}
 
 }
+@media screen and (min-width: 801px) {
+		.parallax{
+			background-image: url("images/v3.png");
+		}
+	}
 
+@media screen and (max-width: 800px) {
+	.parallax{
+
+		background-image: url("images/mobile-bg.png");
+	}
+
+}
 #social_text{
 	transition: opacity,350ms;
 	opacity:0;
 	text-align:center;
 	margin: auto;
-	font-family: 'Cantora One';font-size: 45px;
+	font-family: 'Cantora One';
 	background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,7 +265,7 @@ max-width: 35%;
 	opacity:0;
 	text-align:center;
 	margin: auto;
-	font-family: 'Cantora One';font-size: 45px;
+	font-family: 'Cantora One';
 	background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -220,7 +281,7 @@ max-width: 35%;
 	opacity:0;
 	text-align:center;
 	margin: auto;
-	font-family: 'Cantora One';font-size: 45px;
+	font-family: 'Cantora One';
 	background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -231,11 +292,4 @@ max-width: 35%;
 	opacity:100;
 }
 
-.footer {
-  
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
+
