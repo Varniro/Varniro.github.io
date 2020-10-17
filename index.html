@@ -1,41 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<link rel >
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="stylesheet.css">
-	</head>
 
-<body>
-	
+<head>
+	<meta charset="utf-8">
+	<link rel>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="stylesheet.css">
+	<script src="https://kit.fontawesome.com/b9b5290eca.js" crossorigin="anonymous"></script>
+	<link href='https://fonts.googleapis.com/css?family=Architects Daughter' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Cantora One' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=The Girl Next Door' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Sunshiney' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Rock Salt' rel='stylesheet'>
+</head>
+
+<body onload="randomizer()">
+
 	<div class="parallax">
 		<div class="welcome">
-		
-		 <img src = "images/g959.png" class = "center"></img>
+
+			<!-- <img src = "images/g959.png" class = "center"></img> -->
 		</div>
-		<div class="box-1"
-		
-		<button class="next"><a href="#page1"><img src ="images/arrow.png" width = "10%" padding="0 px"></a></button>
+		<div class="box-1" <button class="next"><a href="#page1"><i class="fas fa-chevron-down fa-2x"></i></a></button>
 		</div>
 	</div>
-	
+
 	<div class="first" id="page1">
-		<p>Hey there! I am Varniro, I am a</p>
-		<ul>
-		<li>Game Dev</li>
-		<li>Pixel artist</li>
-		<li>Vector Artist</li>
-		<li>3D Modeller and Animator</li>
-		<li>Chiptune Composer</li>
+		<p>Hey there! I am <span style=font-size:35px; id="varn_text">Varniro</span>, I am a</p>
+		<ul id="horizontal-list">
+			<li><i class="fas fa-gamepad" id="controller_icon"></i> Game Dev</li>
+			<li><i class="fas fa-palette" id="palette_icon"></i> Pixel Artist </li>
+			<li><i class="fas fa-paint-brush" id="brush_icon"></i> Vector Artist </li>
+			<li><i class="fas fa-cube" id="cube_icon"></i> 3D Modeller/Animator</li>
+			<li><i class="fas fa-music" id="music_icon"></i> Chiptune Composer</li>
 		</ul>
-		<p>And much more!</p>
+		<p>And much more...</p>
 	</div>
-	<div class ="parallax2">
+	<div class="parallax2">
+		<div id="socials" class = "container">
+
+			<img class = "round_Button"src="images/socialsLogo.png">
+			<p id = "social_text">My Socials</p>
+		</div>
+
 	
-	
+		<div id="gallery" class = "container">
+			<img class = "round_Button2"src =  images/gallery_logo.png></img>
+			<p id = "gallery_text">Some of My Works</p>
+		</div>
+
+		<div id="blog" class = "container">
+			<img class = "round_Button2"src =  images/blog_logo.png></img>
+			<p id = "blog_text">Weekly Blogs, Coming Soon!</p>
+		</div>
+
+		
 	</div>
-			
+
+	<div class="footer">
+  <p>Footer</p>
+</div>
+
+
+
+
+	<script src=main.js>
+	</script>
+
 </body>
 
 </html>
