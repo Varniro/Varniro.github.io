@@ -3,7 +3,6 @@ body, html {
   margin: 0;
   scroll-behavior: smooth;
 }
-
 .parallax {
 	height: 100%;
 	background-attachment: fixed;
@@ -18,9 +17,6 @@ body, html {
 	align-items: bottom;
 	font-size: 30px;
 }
-
-
-
 .parallax2 {
 	background-image: url("images/footer-bg.png");
 	min-height: 300px;
@@ -39,110 +35,84 @@ body, html {
 	text-align:center;padding:20px 50px;
 	text-align: justify;
 	font-family: 'Cantora One';
-	font-size: 30px;
-	
+	font-size: 30px;	
 }
-
 li{
 	font-family: 'Architects Daughter';
 	padding:0;
 }
-
-#varn_text{
-	
+#varn_text{	
 	font-family: 'Rock Salt'; 
 	font-size: 25px;
 }
-
 ul#horizontal-list {
 	display: grid;
     grid-template-columns: repeat(2, 1fr);
 	list-style-type: none;
 	padding: 0px;
 	margin: 0px;
-}
-	
-i{
-	
+}	
+i{	
 	padding:0px;
 }
-a{
-	
+a{	
 	text-decoration: none;
 }
-
 a:active{
-
 	color:black;
 }
-
 a:visited{
-
 	color:none;
 }
 
 @media screen and (min-width: 911px) {
-
 	.round_Button{
 
-		width: 60%
+		width: 40%;
 	}
-
 	#social_text,#gallery_text,#blog_text{
 
 		font-size: 45px;
+		transition: opacity,350ms;
+		opacity:0;
 	}
 	li{
 		font-size: 35px;
 	}
 
 	.parallax{
-			background-image: url("images/v3.png");
-			
+		background-image: url("images/v3.png");			
 	}
-
 	.parallax2{
 		padding-top: 100px;
 	}
-
 	p,#varn_text{
 		font-size: 30px;
 	}
-
 	#controller_icon,#brush_icon,#palette_icon,#music_icon,#cube_icon{
 	transition: opacity,350ms;
 	opacity:0;
 	}
-
 	li:hover > #controller_icon{
 	opacity:100;
 	cursor:default;
 	}
-	
-	li:hover > #brush_icon{
-			
+	li:hover > #brush_icon{		
 		opacity:100;
 		cursor:default;
 	}
-		
-	li:hover > #palette_icon{
-			
+	li:hover > #palette_icon{		
 		opacity:100;
 		cursor:default;
 	}
-		
-	li:hover > #music_icon{
-			
+	li:hover > #music_icon{		
 		opacity:100;
 		cursor:default;
 	}
-		
-	li:hover > #cube_icon{
-			
+	li:hover > #cube_icon{		
 		opacity:100;
 		cursor:default;
 	}
-
 }
 
 @media screen and (max-width: 910px) {
@@ -158,7 +128,7 @@ a:visited{
 		font-size: 30px;
 	}
 
-	li ,#social_text {
+	li {
 		font-size: 23px;
 	}
 	.parallax{
@@ -248,8 +218,7 @@ a:visited{
 	
 }
 #social_text{
-	transition: opacity,350ms;
-	opacity:0;
+	
 	text-align:center;
 	margin: auto;
 	font-family: 'Cantora One';
@@ -263,8 +232,6 @@ a:visited{
 	opacity:100;
 }
 #gallery_text{
-	transition: opacity,350ms;
-	opacity:0;
 	text-align:center;
 	margin: auto;
 	font-family: 'Cantora One';
@@ -279,8 +246,6 @@ a:visited{
 }
 
 #blog_text{
-	transition: opacity,350ms;
-	opacity:0;
 	text-align:center;
 	margin: auto;
 	font-family: 'Cantora One';
@@ -293,5 +258,9 @@ a:visited{
 
 	opacity:100;
 }
+
+
+
+
 
 

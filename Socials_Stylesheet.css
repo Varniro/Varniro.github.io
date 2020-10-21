@@ -1,0 +1,92 @@
+/**Socials**/
+body, html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-image: url("images/socialsBG.png");
+  height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: -webkit-linear-gradient(#0F2027,#203A43,#2c3564);
+}
+ 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-left: 1px solid #bbb;
+}
+
+.active { 
+  background-color:#4CAF50;
+}
+
+li{
+  float: right;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+#navbar_logo{
+  width: 100px;
+  justify-content: flex-start;
+}
+
+.embeds{
+
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+  
+}
+
+@font-face {
+  font-family: DiscordFont;
+  src: url(fonts/UniSans/OTF/UniSansDemo-HeavyCAPS.otf);
+}
+
+.twitter-embed{
+
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 300px;
+  font-family: "Open Sans";
+  color: #14171A;
+  text-align:right;
+
+
+}
+
+h1{
+
+  
+}
+.twitter-timeline{
+
+  11margin-left: 30px;
+
+}
+.discord-embed{
+  align-self: flex-end;
+  margin-right: 60px;
+  font-family: "DiscordFont";
+  color: #7289DA;
+}
+
+img{
+  border-radius: 6px;
+}
