@@ -4,31 +4,50 @@
     <title>Social Links</title>
     <link rel="stylesheet" href="Socials_Stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    	<script src="https://kit.fontawesome.com/b9b5290eca.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Cantora One' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
   <body>
     <ul>
-      <img id="navbar_logo" src ="images/g959.png"></img>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="#news">Gallery</a></li>
-      <li><a href="#contact">Blog</a></li>
-      <li><a href="#about">Socials</a></li>
+      <!-- <img id="navbar_logo" src ="images/g959.png"></img> -->
+      <li><a class="homeBtn" href="index.html"><i class="fas fa-home"></i> <p class="navbar_home">Home</p></a></li>
+      <li><a class="socialsBtn" href="Socials.html"><i class="fas fa-hashtag"></i><p class="navbar_socials">Socials</p></a></li>
+      <li><a class="galleryBtn" href="#Gallery"><i class="far fa-images"></i><p class="navbar_gallery">Gallery</p></a></li>
+      <li><a class="blogBtn" href="#Blog"><i class="fas fa-pen-nib"></i><p class="navbar_blog">Blog</p></a></li>
     </ul>
 
     <div class="embeds">
 
       <div class="twitter-embed">
-        <h1 class = "twiiter-text">KEEP UP WITH MY DAILY SHENANIGANS ON TWITTER!</h1>
+        <h1 class = "twitter-text">KEEP UP WITH MY DAILY SHENANIGANS ON TWITTER!</h1>
         <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/varniro?ref_src=twsrc%5Etfw">Tweets by varniro</a> 
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+        <br>
+        <a href ="https://twitter.com/varniro"><span class="follow-text">Follow @varniro on Twitter!</span></a>
       </div>
 
       <div class="discord-embed">
-        <!-- <iframe src="discord.html" width="400" height="500"></iframe> -->
         <h1>DM ME ON DISCORD TO ASK FOR A QUICK COMMISION!</h1>
-        <img src="images/discord.gif" height = "500"alt="gif">
+        <img class="discord-screen" src="images/discord.gif" height = "500"alt="gif">
+        <br>
+        <a id="copyButton" data-clipboard-text="Varniro#3606">
+          <span class="discord-text">Add "<span id="examplePre">Varniro#3606</span>" as a freind on DISCORD</span></a>
+          <br>
+          <span id="successMsg" style="display:none;">Copied!</span>
+          <p>
+            <span id="successMsg" style="display:none;">Copied!</span>
+          </p>
+        
       </div>
     </div>
+    
+       
+    
   </body>
+  
+  <script src="copy.js"></script>
 
 </html>

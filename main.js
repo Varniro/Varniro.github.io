@@ -42,11 +42,11 @@
 // varn.style.fontFamily = fonts[rand], "Cantora One";
 // varn.addEventListener("mouseover", adder);
 
+var clip = new Clipboard('.btn');
 
-varn = document.querySelector(".twitter-text")
-
-function css( element, property ) {
-    return window.getComputedStyle( element, null ).getPropertyValue( property );
-}
-
-css( varn, 'font-family' )
+clip.on("success", function() {
+  document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
+});
+clip.on("error", function() {
+  document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
+});
