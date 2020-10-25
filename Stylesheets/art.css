@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-color:#777;
+  height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  font-family: "Cantora One";
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  background: -webkit-linear-gradient(left,rgba(236, 72, 7, 0.466),rgba(217, 10, 224, 0.459));
+}
+ 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+a{
+
+  text-decoration: none;
+  color: #F5F8FA;
+
+}
+
+a:active{
+  color: #F5F8FA;
+}
+a:visited{
+
+  color: #F5F8FA;
+
+}
+
+.follow-text{
+  font-size:27px;
+  transition:size,300ms;
+  
+}
+
+.follow-text:hover{
+  text-decoration: underline;
+  font-size:30px;
+}
+
+
+li{
+  
+  font-size:40px;
+  border-right: 1px solid #bbb;
+}
+li:last-child {
+  border-right: none;
+}
+
+.homeBtn, .socialsBtn, .galleryBtn, .blogBtn{
+  display: flex;
+  justify-content: baseline;
+  padding:5px;
+  
+}
+.galleryBtn{
+background-color: #090a098c;
+}
+.navbar_home{
+  font-size: 0px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+.navbar_socials{
+  font-size: 0px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+.navbar_gallery{
+  font-size: 30px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+.navbar_blog{
+  font-size: 0px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+
+.homeBtn:hover>.navbar_home{
+
+  font-size: 30px;
+}
+
+.socialsBtn:hover>.navbar_socials{
+
+  font-size: 30px;
+}
+
+.galleryBtn:hover>.navbar_gallery{
+
+  font-size: 30px;
+}
+
+.blogBtn:hover>.navbar_blog{
+
+  font-size: 30px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+#navbar_logo{
+  width: 100px;
+  align-self: flex-start;
+}
+
+.navbar_button{
+    width:50px;
+}
+.gallery-container{
+
+  display: grid;
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: Cantora One;
+  background: -webkit-linear-gradient(left,#240b36,#c31432);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery-box{
+
+  padding: 20px;
+  font-size: 10px;
+  font-family: Cantora One;
+  background: -webkit-linear-gradient(left,#240b36,#c31432);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  float: left;
+}
+
+.gallery-box img{
+
+    border-radius: 7px;
+}
+
+.category{
+    display: grid;
+    text-align: center;
+    font-size: 30px;
+}
+
+.box-image{
+  border-radius: 5px;
+  border: 5px solid rgb(236, 230, 230);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+  margin: 10px;
+  margin-bottom:2px:
+}
+.box-image:hover{
+
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.5), 0 6px 35px 0 rgba(0, 0, 0, 0.4);
+}
+hr { 
+  width: 100%;
+  grid-column: auto;
+  margin-top:0px;
+  }
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+
