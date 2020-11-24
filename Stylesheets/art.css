@@ -6,7 +6,7 @@ body, html {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  background-color:#777;
+  background-image: url("/images/rect815.png");
   height: 100%;
 	background-attachment: fixed;
 	background-position: center;
@@ -147,7 +147,7 @@ li a:hover {
   margin-top: 50px;
   font-size: 40px;
   font-family: Cantora One;
-  background: -webkit-linear-gradient(left,#240b36,#c31432);
+  background: -webkit-linear-gradient(right,#240b36,#c31432);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
