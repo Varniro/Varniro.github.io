@@ -264,7 +264,7 @@ img {vertical-align: middle;}
   text-align: center;
   font-size: 40px;
   font-family: Cantora One;
-  background: -webkit-linear-gradient(left,#240b36,#c31432);
+  background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

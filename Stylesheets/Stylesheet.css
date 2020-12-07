@@ -40,6 +40,7 @@ body, html {
 li{
 	font-family: 'Architects Daughter';
 	padding:0;
+	cursor: pointer;
 }
 #varn_text{	
 	font-family: 'Rock Salt'; 
@@ -57,6 +58,7 @@ i{
 }
 a{	
 	text-decoration: none;
+	color:inherit;
 }
 a:active{
 	color:black;
@@ -94,24 +96,16 @@ a:visited{
 	opacity:0;
 	}
 	li:hover > #controller_icon{
-	opacity:100;
-	cursor:default;
-	}
-	li:hover > #brush_icon{		
 		opacity:100;
-		cursor:default;
 	}
 	li:hover > #palette_icon{		
 		opacity:100;
-		cursor:default;
 	}
 	li:hover > #music_icon{		
 		opacity:100;
-		cursor:default;
 	}
 	li:hover > #cube_icon{		
 		opacity:100;
-		cursor:default;
 	}
 }
 

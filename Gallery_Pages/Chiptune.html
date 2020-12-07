@@ -1,0 +1,86 @@
+---
+title: Chiptunes
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiptunes</title>
+    <link rel="stylesheet" href="\Stylesheets\Chiptunes.css">
+    <script src="https://kit.fontawesome.com/b9b5290eca.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Cantora One' rel='stylesheet'>
+    
+</head>
+<body>
+    <ul>
+      <li><a class="homeBtn" href="/index.html"><i class="fas fa-home"></i> <p class="navbar_home">Home</p></a></li>
+      <li><a class="socialsBtn" href="/Socials.html"><i class="fas fa-hashtag"></i><p class="navbar_socials">Socials</p></a></li>
+      <li><a class="galleryBtn" href="/Gallery.html"><i class="far fa-images"></i><p class="navbar_gallery">Gallery</p></a></li>
+      <li><a class="blogBtn" href="#Blog"><i class="fas fa-pen-nib"></i><p class="navbar_blog">Blog</p></a></li>
+    </ul>
+	
+	<div id = "page_title">
+		Some of my Chiptunes!
+	</div>
+	<div id = "controls">
+		<input  type ="range" id="volume" min="0" max="100" value="70"></input>
+		<div>
+			<i id = "volume-logo" class="fas fa-volume-up"></i> : <span id = "v_text"></span>
+		</div>
+	</div>
+
+    <div id = "gallery-container-1">
+		<div id ="gallery-box-1" onmouseover="on1()" onmouseleave="off1()" onclick="change1()">
+			<div class ="container">
+				<div class = "play-sign"></div>
+				<div class = "pause-sign"></div>
+			</div>
+			<audio loop preload="auto" id="song1">
+				<source src="/Audios/hcd.mp3" type="audio/mpeg">			
+			</audio>
+		</div>
+		<div class = "song_text">
+			<p class = "song_name">Dope Song</p>
+			<p class = "song_desc">Super dope song, this song was originally made for dope purposes and has a dopish vibe.</p>
+		</div>
+	</div>
+	
+	<div id = "gallery-container-2">
+		<div id ="gallery-box-2" onmouseover="on2()" onmouseleave="off2()" onclick = "change2()">
+			<div class ="container">
+				<div class = "play-sign"></div>
+				<div class = "pause-sign"></div>
+			</div>
+			<audio loop preload="auto" id="song2">
+				<source src="/Audios/Shill-ber.mp3" type="audio/mpeg">			
+			</audio>
+		</div>
+		<div class = "song_text">
+			<p class = "song_name" style = " text-align:right">Rad Song</p>
+			<p class = "song_desc">Super rad song, this song was originally made for rad purposes and has a super rad-ish vibe.</p>
+		</div>
+	</div>
+	
+	<div id = "gallery-container-3">
+		<div id ="gallery-box-3" onmouseover="on3()" onmouseleave="off3()" onclick = "change3()">
+			<div class ="container">
+				<div class = "play-sign"></div>
+				<div class = "pause-sign"></div>
+			</div>
+			<audio loop preload="auto" id="song3">
+				<source src="/Audios/mbr.mp3" type="audio/mpeg">			
+			</audio>
+		</div>
+		<div class = "song_text">
+			<p class = "song_name">Noice Song</p>
+			<p class = "song_desc">Super Noice song, this song was originally made for Noice purposes and has a bit Noicey vibe.</p>
+		</div>
+	</div>
+<script src="/Javascripts/Chiptunes.js">
+    
+</script>
+{% include Open-embed.html %}
+</body>
+</html>

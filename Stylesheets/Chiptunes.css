@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  background-image: url("/images/rect815.png");
+  height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  font-family: "Cantora One";
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  background: -webkit-linear-gradient(left,rgba(236, 72, 7, 0.466),rgba(217, 10, 224, 0.459));
+}
+ 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+a{
+
+  text-decoration: none;
+  color: #F5F8FA;
+
+}
+
+a:active{
+  color: #F5F8FA;
+}
+a:visited{
+
+  color: #F5F8FA;
+
+}
+li{
+  
+  font-size:40px;
+  border-right: 1px solid #bbb;
+}
+li:last-child {
+  border-right: none;
+}
+
+.homeBtn, .socialsBtn, .galleryBtn, .blogBtn{
+  display: flex;
+  justify-content: baseline;
+  padding:5px;
+  
+}
+.navbar_home{
+  font-size: 0px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+.navbar_socials{
+  font-size: 0px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+.navbar_gallery{
+  font-size: 30px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+.navbar_blog{
+  font-size: 0px;
+  transition: font-size,300ms;
+  padding: 0px;
+  margin: 0%;
+}
+
+.homeBtn:hover>.navbar_home{
+
+  font-size: 30px;
+}
+
+.socialsBtn:hover>.navbar_socials{
+
+  font-size: 30px;
+}
+
+.galleryBtn:hover>.navbar_gallery{
+
+  font-size: 30px;
+}
+
+.blogBtn:hover>.navbar_blog{
+
+  font-size: 30px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+#navbar_logo{
+  width: 100px;
+  align-self: flex-start;
+}
+
+.navbar_button{
+    width:50px;
+}
+#gallery-container-1{
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: Cantora One;
+  background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display:flex;
+  flex-direction:row;
+}
+
+#gallery-container-2{
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: Cantora One;
+  background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display:flex;
+  flex-direction:row-reverse;
+  align-items: flex-end;
+}
+
+#gallery-container-3{
+  margin-top: 50px;
+  font-size: 40px;
+  font-family: Cantora One;
+  background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display:flex;
+  flex-direction:row;
+}
+
+#gallery-box-1{
+
+  margin: 20px;
+  font-size: 10px;
+  font-family: Cantora One;
+  background-image: url(/images/pause.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width:160px;
+  z-index:3;
+}
+
+#gallery-box-2{
+
+  margin: 20px;
+  font-size: 10px;
+  font-family: Cantora One;
+  background-image: url(/images/pause1.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width:160px;
+  z-index:3;
+  align-self:flex-end;
+}
+
+#gallery-box-3{
+
+  margin: 20px;
+  font-size: 10px;
+  font-family: Cantora One;
+  background-image: url(/images/pause2.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  width:160px;
+}
+
+#controls{
+    
+  margin-top: 60px;
+  font-size: 40px;
+  font-family: Cantora One;
+  background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+}
+
+#volume{
+    -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 20%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 8px;  
+}
+
+#volume:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 55%; 
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+#volume::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 55%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.gallery-box img{
+
+    border-radius: 7px;
+}
+
+.category{
+    display: grid;
+    text-align: center;
+    font-size: 30px;
+}
+
+.box-image{
+  border-radius: 5px;
+  border: 5px solid rgb(236, 230, 230);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+p{
+  margin: 10px;
+  margin-bottom:2px:
+}
+.box-image:hover{
+
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.5), 0 6px 35px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+.container{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  background: #c2c2c2;
+  opacity:0;
+  border-radius:40px;
+  z-index:2;
+  margin: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-sign{
+    width: 0;
+	height: 0;
+    position: absolute;
+    margin-left:5px;
+	border-top: 12px solid transparent;
+	border-left: 17px solid #555;
+	border-bottom: 12px solid transparent;
+}
+
+.pause-sign{
+    opacity:0;
+    width: 15px;
+	height: 20px;
+    position: absolute;
+    border-left: 5px solid #555;
+    border-right: 5px solid #555;
+    
+}
+
+.song{
+    z-index:1;
+    position:absolute;
+}
+
+.song_desc{
+    margin:20px;
+  font-size: 30px;
+  font-family: Cantora One;
+  align-self:center;
+}
+
+.song_name{
+    margin: 20px;
+  font-size: 40px;
+  font-family: Cantora One;
+  align-self:center;
+}
+
+#page_title{
+    background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top:50px;
+  font-size: 50px;
+  font-family: Cantora One;
+  align-self:center;
+    
+}

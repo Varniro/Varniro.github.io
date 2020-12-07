@@ -183,6 +183,7 @@ li a:hover {
 .discord-text{
   font-size:27px;
   text-decoration:none;
+  color: #7289DA;
   transition:text-decoration,300ms;  
 }
 
