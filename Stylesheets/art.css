@@ -147,7 +147,7 @@ li a:hover {
   margin-top: 50px;
   font-size: 40px;
   font-family: Cantora One;
-  background: -webkit-linear-gradient(right,#240b36,#c31432);
+  background: -webkit-linear-gradient(right,#C9D6FF,#E2E2E2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
