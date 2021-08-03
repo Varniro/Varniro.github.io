@@ -1,50 +1,34 @@
-jQuery(function($) {
+const copy = str => {
+  const el = document.createElement('textarea');
+  el.value = str;
+  document.body.appendChild(el);
+  el.select();
+  document.execCommand('copy');
+  document.body.removeChild(el);
+  typeWriter();
+}
 
-  var copyCommandSupported = document.queryCommandSupported('copy');
-  $('#featureDetectMsg').text('Copy command supported: ' + copyCommandSupported);
-  
-  $('#copyButton').click(function() {
-    var preElement = $('#examplePre')[0];
-    copyToClipboard(preElement, showSuccessMsg);
-  });
+var i = 0;
+var txt = 'opied to Clipboard';
+var speed = 25;
+var timer;
 
-  function showSuccessMsg() {
-    $('#successMsg').finish().fadeIn(30).fadeOut(1000);
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("copy").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
+  document.getElementById("copy").style.opacity = "1";
+  timer = setTimeout(clear,1500);
 
-  function copyToClipboard(element, successCallback) {
-    selectText(element);
-    
-    var succeed;
-    try {
-      succeed = document.execCommand('copy');
-    } catch (e) {
-      succeed = false;
-    }
+  console.log("tw");
+}
 
-    if (succeed && (typeof successCallback === 'function')) {
-      successCallback();
-    }
-  }
-
-  function selectText(element) {
-    if (/INPUT|TEXTAREA/i.test(element.tagName)) {
-      element.focus();
-      if (element.setSelectionRange) {
-        element.setSelectionRange(0, element.value.length);
-      } else {
-        element.select();
-      }
-      return;
-    }
-    
-    if (window.getSelection) { // All browsers, except IE <=8
-      window.getSelection().selectAllChildren(element);
-    } else if (document.body.createTextRange) { // IE <=8
-      var range = document.body.createTextRange();
-      range.moveToElementText(element);
-      range.select();
-    }
-  }
-
-});
+function clear(){
+  document.getElementById("copy").innerHTML = "C";
+  i = 0;
+  clearInterval(timer);
+  document.getElementById("copy").style.opacity = "0";
+  console.log("clear");
+}

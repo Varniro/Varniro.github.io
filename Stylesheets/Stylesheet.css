@@ -10,41 +10,111 @@ body, html {
 	background-repeat: no-repeat;
 	background-size: cover;
 	justify-content: space-between;
-	flex-direction: column-reverse;
+	flex-direction: column;
 	height: 100vh;
 	display: flex;
 	text-align: center;
 	align-items: bottom;
 	font-size: 30px;
-	color: white;
+	background-color: #32373b;
+	color: #c83e4d;
+	font-family: "Acka";
 }
-.parallax2 {
-	/*background-image: url("/images/footer-bg.png");*/
 
-	background-color: #030407;
-	min-height: 300px;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	flex-direction: row;
-	align-content: space-between;
-	text-align: center;
+.parallax h2{
+	font-size: 90px;
+	padding:10px;
+	margin-top: 70px;
+	margin-bottom: 0px;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+.parallax h1{
+	font-size: 220px;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+@font-face {
+    font-family: Acka;
+    src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
+}
+
+#navbar{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+  	font-family: "Cuprum";
+  	display: flex;
+  	justify-content: center;
+  	backdrop-filter: blur(3px);
+  	 background: #4a58592a;
+}
+#navbar li{
+	margin: 5px;
+	display: block;
+  position: relative;
+}
+
+#SocialsNav::after, #GalleryNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+
+	opacity: 1;
+  	transform: scale(0);
+  	transform-origin: center;
+	  transform: translate3d(0, 0.2em, 0);
+}
+
+#HomeNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+}
+
+#navbar li:hover::after, #navbar li:focus::after{
+	transform: scale(1);
 }
 .first {
-	color: #c5c6c7;
-	background-color:#1f2833;
+	color: #edf6f9;
+	background-color:#4a5859;
 	text-align:center;padding:20px 50px;
 	text-align: justify;
-	font-family: 'Cantora One';
+	font-family: 'Cuprum';
 	font-size: 30px;	
 }
-li{
-	font-family: 'Architects Daughter';
-	padding:0;
-	cursor: pointer;
+
+.first li:hover{
+		text-decoration: underline;
 }
+
 #varn_text{	
 	font-family: 'Rock Salt'; 
 	font-size: 25px;
@@ -64,45 +134,36 @@ a{
 	color:inherit;
 }
 a:active{
-	color:black;
+	color: none;
 }
 a:visited{
 	color:none;
 }
 
 @media screen and (min-width: 911px) {
-	.round_Button{
-
-		width: 50%;
-	}
-	#social_text,#gallery_text,#blog_text{
-
-		font-size: 45px;
-		transition: opacity,350ms;
-		opacity:0;
-	}
 	li{
 		font-size: 35px;
+	}
+
+	#navbar{
+		font-size: 40px;
 	}
 	::-webkit-scrollbar {
 		width: 10px;
 	}
 
 	::-webkit-scrollbar-track {
-		background:#030407 ; 
+		background:#32373b ; 
 	}
-	   
+	
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: #66fcf1; 
+		background: #db9aa3; 
 	}
 	  
 	/* Handle on hover */
 	::-webkit-scrollbar-thumb:hover {
-		background: #b30000; 
-	}
-	.parallax{
-		background-image: url("/images/bgbg.png");			
+		background: #c83e4d; 
 	}
 	.parallax2{
 		padding-top: 100px;
@@ -111,7 +172,12 @@ a:visited{
 		font-size: 30px;
 		margin: 0;
 	}
-	#controller_icon,#brush_icon,#palette_icon,#music_icon,#cube_icon{
+
+	#about{
+		font-size: 25px;
+		padding: 30px;
+	}
+	#controller_icon,#palette_icon,#music_icon{
 	transition: opacity,350ms;
 	opacity:0;
 	}
@@ -124,24 +190,9 @@ a:visited{
 	li:hover > #music_icon{		
 		opacity:100;
 	}
-	li:hover > #cube_icon{		
-		opacity:100;
-	}
 }
 
 @media screen and (max-width: 910px) {
-
-
-	.round_Button{
-
-		width: 60%;
-	}
-
-	#social_text,#gallery_text,#blog_text{
-
-		font-size: 50px;
-	}
-
 	li {
 		font-size: 23px;
 	}
@@ -177,17 +228,6 @@ a:visited{
 
 @media screen and (max-width: 640px) {
 
-
-	.round_Button{
-
-		width: 60%;
-	}
-
-	#social_text,#gallery_text,#blog_text{
-
-		font-size: 25px;
-	}
-
 	li{
 		font-size: 40px;
 	}
@@ -212,18 +252,6 @@ a:visited{
 
 @media screen and (max-width: 460px) {
 
-	.round_Button{
-
-		width: 80%;
-	}
-
-	#social_text,#gallery_text,#blog_text{
-
-		font-size: 30px;
-	}
-	#controller_icon,#brush_icon,#palette_icon,#music_icon,#cube_icon{
-	display: none;
-	}
 	li{
 		font-size: 15px;
 	}
@@ -240,52 +268,30 @@ a:visited{
 
 	
 }
-#social_text{
-	
-	text-align:center;
-	margin: auto;
-	font-family: 'Cantora One';
-	color: #c5c6c7;
-}
-
-#socials:hover > #social_text{
-
-	opacity:100;
-}
-#gallery_text{
-	text-align:center;
-	margin: auto;
-	font-family: 'Cantora One';
-	color: #c5c6c7;
-}
-
-#gallery:hover > #gallery_text{
-
-	opacity:100;
-}
-
-#blog_text{
-	text-align:center;
-	margin: auto;
-	font-family: 'Cantora One';
-	color: #c5c6c7;
-}
-
-#blog:hover > #blog_text{
-
-	opacity:100;
-}
 
 footer{
 	border-top: 5px solid;
-	border-color: #45a29e;
-	background: #030407;
-	color:#c5c6c7;
+	border-color: #83c5be;
+	background: #32373b;
+	color:#edf6f9;
+	display: flex;
+	flex-grow: inherit;
+
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
 }
 
-footer img{
-	height: 200px;
-	margin: 0;
+footer h1{
+	color: #c83e4d;
+	font-family: "Acka";
+	font-size: 150px;
+	margin: 0px;
+	padding-top: 20px;
+	padding-left: 20px;
 }
 
 footer ul{
@@ -293,6 +299,7 @@ footer ul{
 	color: #c5c6c7;
 	padding-right: 10px;
 	list-style: none;
+	font-family: "Cuprum";
 }
 
 footer li:hover{
@@ -303,7 +310,10 @@ footer li:hover{
 	color: #c5c6c7;
 	text-align: center;
 	vertical-align: middle;
-	font-family: Cantora One;
+	font-family: "Cuprum";
+	flex-grow: 2;
+	align-self: flex-end;
+	font-size: 20px;
 }
 
 

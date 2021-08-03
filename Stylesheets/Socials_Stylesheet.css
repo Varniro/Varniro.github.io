@@ -3,190 +3,192 @@ body, html {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  background-image: url("/images/socialsBG.png");
+  background: #32373b;
   height: 100%;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: sticky;
-  position: -webkit-sticky;
-  font-family: "Cantora One";
+#navbar{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+  font-family: "Cuprum";
   display: flex;
   justify-content: center;
   backdrop-filter: blur(3px);
-  background: -webkit-linear-gradient(left,rgba(236, 72, 7, 0.466),rgba(217, 10, 224, 0.459));
+	background: #4a58592a;
+  font-size: 35px;
+  color: #c83e4d;
 }
  
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-a{
-
-  text-decoration: none;
-  color: #F5F8FA;
-
+#navbar li{
+	margin: 5px;
+	display: block;
+  position: relative;
 }
 
+#GalleryNav::after, #HomeNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+
+	opacity: 1;
+  	transform: scale(0);
+  	transform-origin: center;
+	  transform: translate3d(0, 0.2em, 0);
+}
+
+#SocialsNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+}
+
+#navbar li:hover::after, #navbar li:focus::after{
+	transform: scale(1);
+}
+
+i{	
+	padding:0px;
+}
+a{	
+	text-decoration: none;
+	color:inherit;
+}
 a:active{
-  color: #F5F8FA;
+	color:none;
 }
 a:visited{
-
-  color: #F5F8FA;
-
+	color:none;
 }
 
-.follow-text{
-  font-size:27px;
-  transition:size,300ms;
+.main{
+  padding-left:50px;
+  padding-right: 50px;
+  font-family: "Cuprum";
+  color:#edf6f9;
+  display: flex;
+ justify-content: space-evenly;
+ align-items: flex-start;
   
 }
 
-.follow-text:hover{
+ h1{
+  font-size: 60px;
+  padding:50px;
+  font-family: "Cuprum";
+  color:#edf6f9;
+}
+
+p{
+  font-size: 40px;
+  padding: 10px;
+  margin:0px;
+}
+
+.SoundCloud{
+  color: orangered;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Discord{
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Twitter{
+  color: #1d9bf0;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.SoundCloud .Square{
+  height: 200px;
+  width: 200px;
+  background-color: #edf6f9;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor:pointer;
+}
+
+.Discord .Square{
+  height: 200px;
+  width: 200px;
+  background-color: #5865F2;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor:pointer;
+}
+
+.Twitter .Square{
+  height: 200px;
+  width: 200px;
+  background-color: #1d9bf0;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  font-size: 25px;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor:pointer;
+}
+
+.Square + p:hover{
+  
   text-decoration: underline;
-  font-size:30px;
 }
 
-.active { 
-  background-color:#4CAF50;
-  
+#copy{
+  opacity: 0;
 }
 
-li{
-  
-  font-size:40px;
-  border-right: 1px solid #bbb;
+button{
+  display: block;
 }
-li:last-child {
-  border-right: none;
+ .main img{
+  height: 100px;
 }
-
-.homeBtn, .socialsBtn, .galleryBtn, .blogBtn{
-  display: flex;
-  justify-content: baseline;
-  padding:5px;
-  
+#copyButton{
+  font-size: 25px;
+  margin:10px;
 }
-.socialsBtn{
-background-color: #090a098c;
-}
-.navbar_home{
-  font-size: 0px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-.navbar_socials{
-  font-size: 30px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-.navbar_gallery{
-  font-size: 0px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-.navbar_blog{
-  font-size: 0px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-
-.homeBtn:hover>.navbar_home{
-
-  font-size: 30px;
-}
-
-.socialsBtn:hover>.navbar_socials{
-
-  font-size: 30px;
-}
-
-.galleryBtn:hover>.navbar_gallery{
-
-  font-size: 30px;
-}
-
-.blogBtn:hover>.navbar_blog{
-
-  font-size: 30px;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: rgba(17, 17, 17, 0.7);
-  backdrop-filter: blur(10px);
-}
-
-#navbar_logo{
-  width: 100px;
-  align-self: flex-start;
-}
-
-.navbar_button{
-    width:50px;
-}
-
-.embeds{
-
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
-  
-}
-
-@font-face {
-  font-family: DiscordFont;
-  src: url(/fonts/UniSans/OTF/UniSansDemo-HeavyCAPS.otf);
-}
-
-.twitter-embed{
-
-  margin-top: 50px;
-  margin-right: 275px;
-  font-family: "Open Sans";
-  color: #F5F8FA;
-  text-align:right;
-
-
-}
-.twitter-text{
-
-  margin-right: px;
-
-}
-.discord-embed{
-  margin-right: 60px;
-  font-family: "DiscordFont";
-  color: #7289DA;
-  margin-top:55px;
-}
-
-.discord-screen{
-  border-radius: 6px;
-}
-
-.discord-text{
-  font-size:27px;
-  text-decoration:none;
-  color: #7289DA;
-  transition:text-decoration,300ms;  
-}
-
 #examplePre::selection {
   background: inherit;
 }
@@ -200,8 +202,8 @@ li a:hover {
   cursor:pointer;
 }
 #succesMsg{
-    
-    font-size:20;
+    font-size:30px;
+    margin:100px;
 }
 button, input[type="submit"], input[type="reset"] {
 	background: none;
@@ -212,4 +214,60 @@ button, input[type="submit"], input[type="reset"] {
 	cursor: pointer;
 	outline: inherit;
 }
+  footer{
+    border-top: 5px solid;
+    border-color: #83c5be;
+    background: #32373b;
+    color:#edf6f9;
+    display: flex;
+    flex-grow: inherit;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+  }
+  
+  footer h1{
+    color: #c83e4d;
+    font-family: "Acka";
+    font-size: 150px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  
+  footer ul{
+    float: right;
+    color: #c5c6c7;
+    padding-right: 10px;
+    list-style: none;
+    font-family: "Cuprum";
+    font-size: 35px;
+  }
+  
+  footer li:hover{
+    text-decoration: underline;
+  }
+  
+  #copyright{
+    color: #c5c6c7;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Cuprum";
+    flex-grow: 2;
+    align-self: flex-end;
+    font-size: 20px;
+  }
+  
+  @font-face {
+    font-family: Acka;
+    src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
+  }
+
+  
+
 

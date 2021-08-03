@@ -7,12 +7,10 @@ title: Varniro's
 	<link rel="stylesheet" href="Stylesheets/Gallery_Stylesheet.css">
 </head>
 
-<ul>
-    <!-- <img id="navbar_logo" src ="images/g959.png"></img> -->
-    <li><a class="homeBtn" href="index.html"><i class="fas fa-home"></i> <p class="navbar_home">Home</p></a></li>
-    <li><a class="socialsBtn" href="Socials.html"><i class="fas fa-hashtag"></i><p class="navbar_socials">Socials</p></a></li>
-    <li><a class="galleryBtn" href="Gallery.html"><i class="far fa-images"></i><p class="navbar_gallery">Gallery</p></a></li>
-    <li><a class="blogBtn" href="#Blog"><i class="fas fa-pen-nib"></i><p class="navbar_blog">Blog</p></a></li>
+<ul id = "navbar">
+    <li id = "HomeNav"><a href="index.html">Home</a></li>
+    <li id = "SocialsNav"><a href="Socials.html">Socials</a></li>
+    <li id = "GalleryNav"><a href="Gallery.html">Gallery</a></li>
 </ul>
 
 
@@ -25,12 +23,12 @@ title: Varniro's
 
     <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="images/Gallery/skullwip6.png" style="height: 450px;">
+        <img src="images/Gallery/House_Big.png" style="height: 450px;">
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
-        <img src="images/Gallery/warzone_wip2.png" style="height: 450px;">
+        <img src="images/Gallery/Desert.png" style="height: 450px;">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -46,23 +44,37 @@ title: Varniro's
 </div>
 
 <div class = "gallery-container">
-    <a href="Gallery_Pages/Pixel_Art.html"><div class="gallery-box">
+    <a href="Gallery_Pages/Pixel_Art.html">
+        <div class="gallery-box">
             <img src="images/Gallery/is_5b.gif" class="box-image" width="300px">
             <p>Pixel Art</p>
         </div>
     </a>    
 
-    <a href = "Gallery_Pages/Web/index.html"div class="gallery-box">
-        <img src="images/Gallery/game.PNG" class="box-image" width="375px">
-        <p>Games</p>
-    </div>
+    <a href = "Gallery_Pages/Web/index.html">
+        <div class="gallery-box">
+            <img src="images/Gallery/game.PNG" class="box-image" width="375px">
+            <p>Games</p>
+        </div>
+    </a>
 
-    <a href="Gallery_Pages/Chiptune.html"><div class="gallery-box">
-        <img src="images/Gallery/moosic.PNG" class="box-image" width="320px">
-        <p>Chiptunes</p>
-    </div></a>
+    <a href="Gallery_Pages/Chiptune.html">
+        <div class="gallery-box">
+            <img src="images/Gallery/moosic.PNG" class="box-image" width="310px">
+            <p>Chiptunes</p>
+        </div>
+    </a>
 </div>
 
+<footer>
+	<h1>V's</h1>
+	<div id = "copyright">©2021 Varniro. All Rights Reserved.</div>
+	<ul>
+		<li><a href="https://twitter.com/varniro">Twitter</a></li>
+		<li><a href="https://soundcloud.com/varniro">SoundCloud</a> </li>
+	</ul>
+	
+</footer>
 
 
 

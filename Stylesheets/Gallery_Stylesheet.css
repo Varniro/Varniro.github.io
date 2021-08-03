@@ -3,7 +3,7 @@ body, html {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
-  background-image: url("/images/rect815.png");
+  background: #32373b;
   height: 100%;
 	background-attachment: fixed;
 	background-position: center;
@@ -11,142 +11,77 @@ body, html {
 	background-size: cover;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  font-family: "Cantora One";
+#navbar{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+  font-family: "Cuprum";
   display: flex;
   justify-content: center;
   backdrop-filter: blur(3px);
-  background: -webkit-linear-gradient(left,rgba(236, 72, 7, 0.466),rgba(217, 10, 224, 0.459));
+	background: #4a58592a;
+  font-size: 35px;
+  color: #c83e4d;
 }
  
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-}
-a{
-
-  text-decoration: none;
-  color: #F5F8FA;
-
+#navbar li{
+	margin: 5px;
+	display: block;
+  position: relative;
 }
 
+#SocialsNav::after, #HomeNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+
+	opacity: 1;
+  	transform: scale(0);
+  	transform-origin: center;
+	  transform: translate3d(0, 0.2em, 0);
+}
+
+#GalleryNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+}
+
+#navbar li:hover::after, #navbar li:focus::after{
+	transform: scale(1);
+}
+
+i{	
+	padding:0px;
+}
+a{	
+	text-decoration: none;
+	color:inherit;
+}
 a:active{
-  color: #F5F8FA;
+	color:none;
 }
 a:visited{
-
-  color: #F5F8FA;
-
+	color:none;
 }
-
-.follow-text{
-  font-size:27px;
-  transition:size,300ms;
-  
-}
-
-.follow-text:hover{
-  text-decoration: underline;
-  font-size:30px;
-}
-
-
-li{
-  
-  font-size:40px;
-  border-right: 1px solid #bbb;
-}
-li:last-child {
-  border-right: none;
-}
-
-.homeBtn, .socialsBtn, .galleryBtn, .blogBtn{
-  display: flex;
-  justify-content: baseline;
-  padding:5px;
-  
-}
-.galleryBtn{
-background-color: #090a098c;
-}
-.navbar_home{
-  font-size: 0px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-.navbar_socials{
-  font-size: 0px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-.navbar_gallery{
-  font-size: 30px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-.navbar_blog{
-  font-size: 0px;
-  transition: font-size,300ms;
-  padding: 0px;
-  margin: 0%;
-}
-
-.homeBtn:hover>.navbar_home{
-
-  font-size: 30px;
-}
-
-.socialsBtn:hover>.navbar_socials{
-
-  font-size: 30px;
-}
-
-.galleryBtn:hover>.navbar_gallery{
-
-  font-size: 30px;
-}
-
-.blogBtn:hover>.navbar_blog{
-
-  font-size: 30px;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: rgba(17, 17, 17, 0.7);
-  backdrop-filter: blur(10px);
-}
-
-#navbar_logo{
-  width: 100px;
-  align-self: flex-start;
-}
-
-.navbar_button{
-    width:50px;
-}
-
-
-
-
-
-
 
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
+body {font-family: "Cuprum";}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
@@ -157,7 +92,7 @@ img {vertical-align: middle;}
   margin: auto;
   display: flex;
   justify-content: center;
-  background-color: #111;
+  background-color: #4a5859;
   border-radius: 7px;
   margin-top: 70px;
 }
@@ -201,7 +136,7 @@ img {vertical-align: middle;}
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: #32373b;
   font-size: 15px;
   padding: 8px 12px;
   bottom: 8px;
@@ -211,8 +146,8 @@ img {vertical-align: middle;}
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
+  color: #32373b;
+  font-size: 20px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -255,7 +190,10 @@ img {vertical-align: middle;}
 
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  background-color: #4a5859;
+
+  margin-top: 20px;
+  
 }
 
 .gallery-box{
@@ -263,16 +201,14 @@ img {vertical-align: middle;}
   padding: 20px;
   text-align: center;
   font-size: 40px;
-  font-family: Cantora One;
-  background: -webkit-linear-gradient(#0cebeb,#20e3b2,#29ffc6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: "Cuprum";
+  color: #edf6f9;
+  margin-top: 30px;
 }
 
 .box-image{
   border-radius: 5px;
-  border: 5px solid rgb(236, 230, 230);
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 5px solid #b8dedc;
 }
 p{
   margin-top: 10px;
@@ -282,5 +218,60 @@ p{
   box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.5), 0 6px 35px 0 rgba(0, 0, 0, 0.4);
 }
 
+footer{
+	border-top: 5px solid;
+	border-color: #83c5be;
+	background: #32373b;
+	color:#edf6f9;
+	display: flex;
+	flex-grow: inherit;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+}
+
+footer h1{
+	color: #c83e4d;
+	font-family: "Acka";
+	font-size: 150px;
+	margin: 0px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+footer ul{
+	float: right;
+	color: #c5c6c7;
+	padding-right: 10px;
+	list-style: none;
+	font-family: "Cuprum";
+  font-size: 35px;
+}
+
+footer li:hover{
+	text-decoration: underline;
+}
+
+#copyright{
+	color: #c5c6c7;
+	text-align: center;
+	vertical-align: middle;
+	font-family: "Cuprum";
+	flex-grow: 2;
+	align-self: flex-end;
+	font-size: 20px;
+}
+
+@font-face {
+  font-family: Acka;
+  src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
+}
+h1{
+  font-family: "Acka";
+}
 
 

@@ -10,41 +10,44 @@ title: Varniro's
   </head>
 
   <body>
-    <ul>
-      <!-- <img id="navbar_logo" src ="images/g959.png"></img> -->
-      <li><a class="homeBtn" href="index.html"><i class="fas fa-home"></i> <p class="navbar_home">Home</p></a></li>
-      <li><a class="socialsBtn" href="Socials.html"><i class="fas fa-hashtag"></i><p class="navbar_socials">Socials</p></a></li>
-      <li><a class="galleryBtn" href="Gallery.html"><i class="far fa-images"></i><p class="navbar_gallery">Gallery</p></a></li>
-      <li><a class="blogBtn" href="#Blog"><i class="fas fa-pen-nib"></i><p class="navbar_blog">Blog</p></a></li>
-    </ul>
-
-    <div class="embeds">
-
-      <div class="twitter-embed">
-        <h1 class = "twitter-text">KEEP UP WITH MY DAILY SHENANIGANS ON TWITTER!</h1>
-        <a class="twitter-timeline" data-width="400" data-height="500" data-theme="dark" href="https://twitter.com/varniro?ref_src=twsrc%5Etfw">Tweets by varniro</a> 
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        
-        <br>
-        <a href ="https://twitter.com/varniro"><span class="follow-text">Follow @varniro on Twitter!</span></a>
-      </div>
-
-      <div class="discord-embed">
-        <h1>DM ME ON DISCORD TO ASK FOR A QUICK COMMISION!</h1>
-        <img class="discord-screen" src="images/discord.gif" height = "500"alt="gif">
-        <br>
-        <a id="copyButton" data-clipboard-text="Varniro#3606">
-          <span class="discord-text">Add "<span id="examplePre">Varniro#3606</span>" as a freind on DISCORD</span></a>
-          <br>
-          <span id="successMsg" style="display:none;">Copied!</span>
-          <p>
-            <span id="successMsg" style="display:none;">Copied!</span>
-          </p>
-        
-      </div>
+    <ul id = "navbar">
+      <li id = "HomeNav"><a href="index.html">Home</a></li>
+      <li id = "SocialsNav"><a href="Socials.html">Socials</a></li>
+      <li id = "GalleryNav"><a href="Gallery.html">Gallery</a></li>
+  </ul>
+  <h1>Stay in Touch!</h1>
+  <div class = "main">
+   
+    <div class = "SoundCloud">
+      Listen to my music on
+      <a href="https://soundcloud.com/varniro">
+        <div class = "Square"><img src="images/soundcloud.svg" alt=""></div>
+      </a>
     </div>
-    
-       
+
+    <div class = "Discord">
+      Send me a friend request on
+      <div class = "Square" onclick="copy('Varniro#3606')"><img src="images/Discord-Logo-White.svg" alt=""></div>
+      <span class="discord-text" onclick="copy('Varniro#3606')">Add "<span id="examplePre">Varniro#3606</span>" as a friend on Discord</span>
+      <span id="copy">C</span>
+    </div>
+
+    <div class = "Twitter">
+      Follow me on
+      <a href="https://twitter.com/varniro">
+        <div class = "Square"><img src="images/Twitter logo/SVG/Logo white.svg" alt=""></div>
+      </a>
+    </div>
+  </div>
+    <footer>
+      <h1>V's</h1>
+      <div id = "copyright">©2021 Varniro. All Rights Reserved.</div>
+      <ul>
+        <li><a href="https://twitter.com/varniro">Twitter</a></li>
+        <li><a href="https://soundcloud.com/varniro">SoundCloud</a> </li>
+      </ul>
+      
+    </footer>
     
   </body>
   
