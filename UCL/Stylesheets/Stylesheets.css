@@ -1,0 +1,661 @@
+:root{
+    --BG1 : #01A7C2;
+    --BG2 : #007090;
+    --font1 : #FFFFFF;
+    --font2 : #FF570A;
+    --font3 : #252422;
+    --deco1 : #111;
+    --color5 : #111;
+
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  .parallax {
+      height: 100%;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100vh;
+      display: flex;
+      text-align: center;
+      align-items: bottom;
+      font-size: 30px;
+      background-image: url(../../images/cric-bg.jpg);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: var(--font1);
+      font-family: "Cabin Sketch";
+      position: relative;
+  }
+  
+  .parallax img{
+      position: absolute;
+      z-index: 0;
+  }
+
+  .parallax2{
+      display:flex;
+      flex-wrap: wrap;
+      background: var(--BG1) ;
+      font-family: "Cuprum";
+      font-size: 40px;
+      color: var(--font2);
+      flex-direction: column;
+      justify-content: space-around;
+  }
+
+  .parallax2 h1{
+      padding: 0px;
+      padding-left: 10px;
+      margin: 10px;
+  }
+
+  .card, .cardAlt{
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+  }
+  .card h4{
+      margin: 10px;
+  }
+
+  .cardAlt h4{
+    margin: 10px;
+    text-align: end;
+}
+  .card img, .cardAlt img{
+      height: 350px;
+      border: #EDF6F9 solid 5px;
+      border-radius: 2px;
+      margin: 20px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.822);
+  }
+  .card h2{
+      font-size: 30px;
+      font-weight: lighter;
+  }
+
+  .cardAlt h2{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: end;
+  }
+  .container {
+    padding: 2px 16px;
+    display: flex;
+    font-size: 30px;
+  }
+
+  .containerAlt {
+    padding: 2px 16px;
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 30px;
+  }
+  .container h4, .containerAlt h4{
+      margin: 10px;
+  }
+  
+  @font-face {
+      font-family: Acka;
+      src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
+  }
+  
+  #navbar{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+        font-family: "Cuprum";
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(3px);
+        background: var(--BG2);
+  }
+  #navbar li{
+      margin: 5px;
+      display: block;
+    position: relative;
+  }
+  
+  #HomeNav::after ,#SocialsNav::after, #GalleryNav::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: var(--deco1);
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+  
+      opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+        transform: translate3d(0, 0.2em, 0);
+  }
+  
+  #navbar li:hover::after, #navbar li:focus::after{
+      transform: scale(1);
+  }
+  
+  .first li:hover{
+          text-decoration: underline;
+  }
+  
+  #varn_text{	
+      font-family: 'Rock Salt'; 
+      font-size: 25px;
+  }
+  ul#horizontal-list {
+      /* display: grid; */
+      /* grid-template-columns: repeat(2, 1fr); */
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+  }	
+  i{	
+      padding:0px;
+  }
+  a{	
+      text-decoration: none;
+      color:inherit;
+  }
+  a:active{
+      color: none;
+  }
+  a:visited{
+      color:none;
+  }
+
+  .music{
+      padding: 20px;
+      display: flex;
+  }
+
+  .music h2{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: end;
+  }
+
+  .musicAlt{
+      padding: 20px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+  }
+  .musicAlt h2{
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: start;
+  }
+
+  .main{
+    padding-left:50px;
+    padding-right: 50px;
+    font-family: "Cuprum";
+    color:var(--font3);
+    display: flex;
+   justify-content: space-evenly;
+   align-items: flex-start;
+    
+  }
+  
+  .main h1{
+    font-size: 60px;
+    padding:50px;
+    font-family: "Cuprum";
+    color:var(--font3);
+  }
+  
+  p{
+    font-size: 50px;
+    padding: 10px;
+    margin:0px;
+  }
+  
+  .SoundCloud{
+    color: orangered;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  
+  .Discord{
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .Twitter{
+    color: #1d9bf0;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .SoundCloud .Square{
+    height: 200px;
+    width: 200px;
+    background-color: #edf6f9;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor:pointer;
+  }
+  
+  .Discord .Square{
+    height: 200px;
+    width: 200px;
+    background-color: #5865F2;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor:pointer;
+  }
+  
+  .Twitter .Square{
+    height: 200px;
+    width: 200px;
+    background-color: #1d9bf0;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor:pointer;
+  }
+  
+  .Square + p:hover{
+    
+    text-decoration: underline;
+  }
+  
+  #copy{
+    opacity: 0;
+  }
+  
+  button{
+    display: block;
+  }
+   .main img{
+    height: 100px;
+  }
+  #copyButton{
+    font-size: 25px;
+    margin:10px;
+  }
+  #examplePre::selection {
+    background: inherit;
+  }
+  
+  #examplePre::-moz-selection {
+    background: inherit; /* Gecko Browsers */
+  }
+  
+  .discord-text:hover{
+    text-decoration: underline;
+    cursor:pointer;
+  }
+  #succesMsg{
+      font-size:30px;
+      margin:100px;
+  }
+  button, input[type="submit"], input[type="reset"] {
+      background: none;
+      color: inherit;
+      border: none;
+      padding: 0;
+      font: inherit;
+      cursor: pointer;
+      outline: inherit;
+  }
+  
+  @media screen and (min-width: 911px) {
+      li{
+          display: block;
+            float: right;
+      }
+  
+      #navbar{
+          font-size: 40px;
+      }
+      ::-webkit-scrollbar {
+          width: 10px;
+      }
+  
+      ::-webkit-scrollbar-track {
+          background:var(--BG1) ; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+          background: var(--deco1); 
+      }
+        
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+          background: var(--deco2); 
+      }
+      p,#varn_text{
+          font-size: 30px;
+          margin: 0;
+      }
+  
+      #about{
+          font-size: 30px;
+          padding: 30px;
+      }
+      #team_icon,#palette_icon,#music_icon{
+      transition: opacity,350ms;
+      opacity:0;
+      }
+      li:hover > #team_icon{
+          opacity:100;
+      }
+      li:hover > #palette_icon{		
+          opacity:100;
+      }
+      li:hover > #music_icon{		
+          opacity:100;
+      }
+
+      .first {
+        color: var(--font1);
+        background-color:var(--BG2);
+        text-align:center;
+        text-justify: center;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        font-size: 50px;
+        padding:20px 50px;
+        font-family: 'Cuprum';
+    }
+
+
+      .parallax h1{
+        font-size: 400px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+        background-color: #ffffff00;
+        -webkit-text-stroke: 3px white;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+                z-index: 1;
+    }
+    .parallax h2{
+        font-size: 100px;
+        padding:5px;
+        font-family: 'Squada One', cursive;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: #01A7C2;
+        -webkit-text-stroke: 0.1px white;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+                z-index: 1;
+    }
+
+    footer{
+        border-top: 5px solid;
+        border-color: var(--deco2);
+        background: var(--BG2);
+        color:var(--font3);
+        display: flex;
+        flex-grow: inherit;
+    
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+      }
+  }
+  
+  @media screen and (max-width: 910px) {
+      li {
+          font-size: 33px;
+      }
+      .container{
+          height: 30%;
+          padding:10%;
+      }
+
+      .parallax h1{
+        font-size: 250px;
+        margin-bottom: 0px;
+        margin-top: 40%;
+        background-color: #ffffff00;
+        -webkit-text-stroke: 3px white;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+                z-index: 1;
+    }
+
+    .parallax h2{
+        font-size: 60px;
+        padding:5px;
+        font-family: 'Squada One', cursive;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: #01A7C2;
+        -webkit-text-stroke: 0.1px white;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+                z-index: 1;
+    }
+  
+    .first {
+        color: var(--font1);
+        background-color:var(--BG2);
+        text-align:center;
+        text-justify: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        padding:20px 50px;
+        font-family: 'Cuprum';
+    }
+  
+      p,#varn_text{
+          font-size: 40px;
+      }
+  
+      .parallax2{
+          min-height: 250px;
+          padding-top: 70px;
+      }
+
+      .footer h1{
+          align-self: center;
+      }
+  
+      footer{
+        border-top: 5px solid;
+        border-color: var(--deco2);
+        background: var(--BG2);
+        color:var(--font3);
+        display: flex;
+        flex-grow: inherit;
+
+    
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+      }
+  }
+  
+  
+  @media screen and (max-width: 640px) {
+  
+      li{
+          font-size: 40px;
+      }
+  
+      .first{
+          padding:15,20;
+      }
+  
+      p,#varn_text{
+          font-size: 18px;
+      }
+      .parallax2{
+          min-height: 250px;
+          padding-top: 70px;
+      }
+  
+  }
+  
+  @media screen and (max-width: 460px) {
+  
+  
+      p,#varn_text{
+          font-size: 15px;
+      }
+      .first{
+          padding:10px;
+      }
+
+      .first {
+        color: var(--font1);
+        background-color:var(--BG2);
+        text-align:center;
+        text-justify: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 70%;
+        padding:20px 50px;
+        font-family: 'Cuprum';
+    }
+      .parallax2{
+          min-height: 200px;
+      }
+
+      footer{
+        border-top: 5px solid;
+        border-color: var(--deco2);
+        background: var(--BG2);
+        color:var(--font3);
+        display: flex;
+        flex-grow: inherit;
+        align-content: center;
+    
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+         -khtml-user-select: none; /* Konqueror HTML */
+           -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; 
+      }
+
+      .footer h1{
+        align-self: center;
+    }
+  
+      
+  }
+  
+  footer{
+      border-top: 5px solid;
+      border-color: var(--font2);
+      background: var(--BG1);
+      color:var(--font3);
+      display: flex;
+      flex-direction: column;
+      flex-grow: inherit;
+      align-content: center;
+      justify-content: center;
+  
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; 
+  }
+  
+  footer h1{
+      color: var(--font1);
+      font-family: "Acka";
+      font-size: 150px;
+      margin: 0px;
+      padding-top: 20px;
+      padding-left: 20px;
+      align-self: center;
+  }
+  
+  footer ul{
+      float: right;
+      color: var(--font3);
+      padding-right: 10px;
+      list-style: none;
+      font-family: "Cuprum";
+  }
+  
+  footer li:hover{
+      text-decoration: underline;
+  }
+  
+  #copyright{
+      color: var(--font3);
+      text-align: center;
+      vertical-align: middle;
+      font-family: "Cuprum";
+      flex-grow: 4;
+      align-self: middle;
+      font-size: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  

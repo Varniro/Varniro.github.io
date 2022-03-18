@@ -1,0 +1,327 @@
+---
+
+---
+body, html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+  .parallax {
+      height: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100vh;
+      display: flex;
+      text-align: center;
+      align-items: bottom;
+      font-size: 30px;
+      background-color: #32373b;
+      color: #c83e4d;
+      font-family: "Acka";
+  }
+  
+  .parallax h2{
+      font-size: 90px;
+      padding:10px;
+      margin-top: 70px;
+      margin-bottom: 0px;
+  
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; 
+  }
+  .parallax h1{
+      font-size: 220px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; 
+  }
+  
+  @font-face {
+      font-family: Acka;
+      src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
+  }
+  
+  #navbar{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+        font-family: "Cuprum";
+        display: flex;
+        justify-content: center;
+        backdrop-filter: blur(3px);
+         background: #4a58592a;
+  }
+  #navbar li{
+      margin: 5px;
+      display: block;
+    position: relative;
+  }
+  
+  #SocialsNav::after, #GalleryNav::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: #db9aa3;
+      opacity: 0;
+      transition: opacity 300ms, transform 300ms;
+  
+      opacity: 1;
+        transform: scale(0);
+        transform-origin: center;
+        transform: translate3d(0, 0.2em, 0);
+  }
+  
+  #HomeNav::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.1em;
+      background-color: #db9aa3;
+  }
+  
+  #navbar li:hover::after, #navbar li:focus::after{
+      transform: scale(1);
+  }
+  .first {
+      color: #edf6f9;
+      background-color:#4a5859;
+      text-align:center;padding:20px 50px;
+      text-align: justify;
+      font-family: 'Cuprum';
+      font-size: 30px;	
+  }
+  
+  .first li:hover{
+          text-decoration: underline;
+  }
+  
+  #varn_text{	
+      font-family: 'Rock Salt'; 
+      font-size: 25px;
+  }
+  ul#horizontal-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      list-style-type: none;
+      padding: 0px;
+      margin: 0px;
+  }	
+  i{	
+      padding:0px;
+  }
+  a{	
+      text-decoration: none;
+      color:inherit;
+  }
+  a:active{
+      color: none;
+  }
+  a:visited{
+      color:none;
+  }
+  
+  @media screen and (min-width: 911px) {
+      li{
+          font-size: 35px;
+      }
+  
+      #navbar{
+          font-size: 40px;
+      }
+      ::-webkit-scrollbar {
+          width: 10px;
+      }
+  
+      ::-webkit-scrollbar-track {
+          background:#32373b ; 
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+          background: #db9aa3; 
+      }
+        
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+          background: #c83e4d; 
+      }
+      .parallax2{
+          padding-top: 100px;
+      }
+      p,#varn_text{
+          font-size: 30px;
+          margin: 0;
+      }
+  
+      #about{
+          font-size: 25px;
+          padding: 30px;
+      }
+      #controller_icon,#palette_icon,#music_icon{
+      transition: opacity,350ms;
+      opacity:0;
+      }
+      li:hover > #controller_icon{
+          opacity:100;
+      }
+      li:hover > #palette_icon{		
+          opacity:100;
+      }
+      li:hover > #music_icon{		
+          opacity:100;
+      }
+  }
+  
+  @media screen and (max-width: 910px) {
+      li {
+          font-size: 23px;
+      }
+      .parallax{
+  
+          background-image: url("/images/mobliebg1.png");
+      }
+  
+      .parallax2{
+          flex-direction: column;
+      }
+  
+      .container{
+          height: 30%;
+          padding:10%;
+      }
+  
+      .first{
+          padding:15,20;
+      }
+  
+      p,#varn_text{
+          font-size: 40px;
+      }
+  
+      .parallax2{
+          min-height: 250px;
+          padding-top: 70px;
+      }
+  
+  }
+  
+  
+  @media screen and (max-width: 640px) {
+  
+      li{
+          font-size: 40px;
+      }
+      .parallax{
+  
+          background-image: url("/images/mobliebg1.png");
+      }
+  
+      .first{
+          padding:15,20;
+      }
+  
+      p,#varn_text{
+          font-size: 18px;
+      }
+      .parallax2{
+          min-height: 250px;
+          padding-top: 70px;
+      }
+  
+  }
+  
+  @media screen and (max-width: 460px) {
+  
+      li{
+          font-size: 15px;
+      }
+  
+      p,#varn_text{
+          font-size: 15px;
+      }
+      .first{
+          padding:10px;
+      }
+      .parallax2{
+          min-height: 200px;
+      }
+  
+      
+  }
+  
+  footer{
+      border-top: 5px solid;
+      border-color: #83c5be;
+      background: #32373b;
+      color:#edf6f9;
+      display: flex;
+      flex-grow: inherit;
+  
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; 
+  }
+  
+  footer h1{
+      color: #c83e4d;
+      font-family: "Acka";
+      font-size: 150px;
+      margin: 0px;
+      padding-top: 20px;
+      padding-left: 20px;
+  }
+  
+  footer ul{
+      float: right;
+      color: #c5c6c7;
+      padding-right: 10px;
+      list-style: none;
+      font-family: "Cuprum";
+  }
+  
+  footer li:hover{
+      text-decoration: underline;
+  }
+  
+  #copyright{
+      color: #c5c6c7;
+      text-align: center;
+      vertical-align: middle;
+      font-family: "Cuprum";
+      flex-grow: 2;
+      align-self: flex-end;
+      font-size: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,16 @@
+{
+"companyName": "Varniro's",
+"productName": "Death Duel Extreme",
+"productVersion": "1.0",
+"dataUrl": "v1.data.unityweb",
+"wasmCodeUrl": "v1.wasm.code.unityweb",
+"wasmFrameworkUrl": "v1.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Light",
+"backgroundColor": "#B0C7EA",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.17f1"
+}
