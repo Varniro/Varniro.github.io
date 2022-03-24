@@ -773,7 +773,7 @@ body, html {
   }
   .leaderboard__profile {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     align-items: center;
     padding: 10px 30px 10px 10px;
     overflow: hidden;
@@ -812,8 +812,6 @@ body, html {
     font-size: 13px;
     margin-left: 3px;
   }
-
-
 
   .leaderboard-2 {
     max-width: 490px;
@@ -872,7 +870,7 @@ body, html {
   }
   .leaderboard__profile {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr;
     align-items: center;
     padding: 10px 30px 10px 10px;
     overflow: hidden;
