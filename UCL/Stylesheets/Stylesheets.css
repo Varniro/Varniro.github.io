@@ -938,10 +938,10 @@ body, html {
     border-top: none;
   }
   tr:nth-child(even){background-color: #f2f2f2;}
-  tr:nth-child(2){
+  .teb tr:nth-child(2){
     border: 4px solid greenyellow;
   }
-  tr:nth-child(3){
+  .teb tr:nth-child(3){
     border: 4px solid greenyellow;
   }
   th {
