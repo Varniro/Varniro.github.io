@@ -1,0 +1,69 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: Acka;
+    src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
+}
+.parallax {
+      height: 100%;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100vh;
+      display: flex;
+      text-align: center;
+      align-items: bottom;
+      font-size: 250%;
+      background-color: #32373b;
+      color: #c83e4d;
+      font-family: "Acka";
+      text-decoration: none;
+  }
+
+#navbar{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+  	font-family: "Cuprum";
+  	display: flex;
+  	justify-content: center;
+  	backdrop-filter: blur(3px);
+  	 background: #4a58592a;
+}
+#navbar li{
+	margin: 5px;
+	display: block;
+  position: relative;
+}
+
+#SocialsNav::after, #GalleryNav::after, #HomeNav::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: #db9aa3;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+
+	opacity: 1;
+  	transform: scale(0);
+  	transform-origin: center;
+	  transform: translate3d(0, 0.2em, 0);
+}
+
+#navbar li:hover::after, #navbar li:focus::after{
+	transform: scale(1);
+}
