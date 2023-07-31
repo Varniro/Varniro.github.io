@@ -5,6 +5,6 @@ axios.get(url,{headers:{
 }}).then((res) =>{
     console.log(res)
     document.querySelector("#quote").innerHTML = res.data.quote
-    document.querySelector("#author").innerHTML = `-${res.data.author} (${res.data.anime})`
+    document.querySelector("#author").innerHTML = `- ${res.data.author} (${res.data.anime})`
 })
 
