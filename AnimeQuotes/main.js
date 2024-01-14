@@ -1,4 +1,4 @@
-const url = "https://waifu.it/api/quote";
+const url = "https://waifu.it/api/v4/quote";
 const key = "MzE5NDYxNjc2Mjg4MDQ5MTU0.MTY5NjEzODc0OA--.c2e907f279d"
 axios.get(url,{headers:{
     Authorization: key
