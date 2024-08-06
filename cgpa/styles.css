@@ -1,0 +1,53 @@
+.semester-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+ body {
+     font-family: 'Open Sans', sans-serif;
+     background-color: #121212;
+     color: #f8f9fa;
+     padding: 2rem;
+ }
+
+ .container {
+     max-width: fit-content;
+     margin: auto;
+     background: #1e1e1e;
+     padding: 2rem;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+
+ h1 {
+     font-weight: 600;
+     margin-bottom: 1.5rem;
+     color: #f8f9fa;
+ }
+
+ .semester-container {
+     margin-bottom: 1.5rem;
+ }
+
+ footer {
+     text-align: center;
+     margin-top: 2rem;
+     font-size: 0.9rem;
+     color: #b0bec5;
+ }
+
+ .semester {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+
+ .semester p {
+     text-align: center;
+     margin: 0;
+     font-size: larger;
+     text-wrap: nowrap;
+ }

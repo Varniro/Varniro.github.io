@@ -1,0 +1,35 @@
+N = 0
+tower = [None, [], [], []]
+
+def main():
+    global N
+    print("Enter number of disks")
+    num = int(input())
+    N = num
+    toh(num)
+
+def toh(n):
+    for d in range(n, 0, -1):
+        tower[1].append(d)
+    display()
+    move(n, 1, 2, 3)
+
+def move(n, a, b, c):
+    if n > 0:
+        move(n-1, a, c, b)
+        d = tower[a].pop()
+        tower[c].append(d)
+        display()
+        move(n-1, b, a, c)
+
+def display():
+    print(" A | B | C")
+    print("--------------")
+    for i in range(N-1, -1, -1):
+        d1 = " " if len(tower[1]) <= i else str(tower[1][i])
+        d2 = " " if len(tower[2]) <= i else str(tower[2][i])
+        d3 = " " if len(tower[3]) <= i else str(tower[3][i])
+        print(d1 + " | " + d2 + " | " + d3)
+
+if __name__ == "__main__":
+    main()
