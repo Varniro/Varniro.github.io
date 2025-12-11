@@ -1,0 +1,11 @@
+*,html {
+
+    scroll-behavior: smooth !important;
+}
+#te {
+    max-width: 30ch;
+    transform-style: preserve-3d;
+    transform: skewY(-12.5deg);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5vw;
+}

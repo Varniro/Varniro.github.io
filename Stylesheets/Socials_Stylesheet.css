@@ -1,236 +1,242 @@
 /**Socials**/
-body, html {
-  height: 100%;
-  margin: 0;
-  scroll-behavior: smooth;
-  background: #32373b;
-  height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+body,
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    background: #32373b;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#navbar{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 10;
-  font-family: "Cuprum";
-  display: flex;
-  justify-content: center;
-  backdrop-filter: blur(3px);
-	background: #4a58592a;
-  font-size: 35px;
-  color: #c83e4d;
-}
- 
-#navbar li{
-	margin: 5px;
-	display: block;
-  position: relative;
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    font-family: "Cuprum";
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    background: #4a58592a;
+    font-size: 35px;
+    color: #c83e4d;
 }
 
-#GalleryNav::after, #HomeNav::after{
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 0.1em;
-	background-color: #db9aa3;
-	opacity: 0;
-	transition: opacity 300ms, transform 300ms;
-
-	opacity: 1;
-  	transform: scale(0);
-  	transform-origin: center;
-	  transform: translate3d(0, 0.2em, 0);
+#navbar li {
+    margin: 5px;
+    display: block;
+    position: relative;
 }
 
-#SocialsNav::after{
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 0.1em;
-	background-color: #db9aa3;
+#GalleryNav::after,
+#HomeNav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #db9aa3;
+    opacity: 0;
+    transition:
+        opacity 300ms,
+        transform 300ms;
+
+    opacity: 1;
+    transform: scale(0);
+    transform-origin: center;
+    transform: translate3d(0, 0.2em, 0);
 }
 
-#navbar li:hover::after, #navbar li:focus::after{
-	transform: scale(1);
+#SocialsNav::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: #db9aa3;
 }
 
-i{	
-	padding:0px;
-}
-a{	
-	text-decoration: none;
-	color:inherit;
-}
-a:active{
-	color:none;
-}
-a:visited{
-	color:none;
+#navbar li:hover::after,
+#navbar li:focus::after {
+    transform: scale(1);
 }
 
-.main{
-  padding-left:50px;
-  padding-right: 50px;
-  font-family: "Cuprum";
-  color:#edf6f9;
-  display: flex;
- justify-content: space-evenly;
- align-items: flex-start;
-  
+i {
+    padding: 0px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:active {
+    color: none;
+}
+a:visited {
+    color: none;
 }
 
- h1{
-  font-size: 60px;
-  padding:50px;
-  font-family: "Cuprum";
-  color:#edf6f9;
+.main {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: "Cuprum";
+    color: #edf6f9;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
-p{
-  font-size: 40px;
-  padding: 10px;
-  margin:0px;
+h1 {
+    font-size: 60px;
+    padding: 50px;
+    font-family: "Cuprum";
+    color: #edf6f9;
 }
 
-.SoundCloud{
-  color: orangered;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  align-items: center;
-  justify-content: space-evenly;
+p {
+    font-size: 40px;
+    padding: 10px;
+    margin: 0px;
 }
 
-.Discord{
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+.SoundCloud {
+    color: orangered;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.Twitter{
-  color: #1d9bf0;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.SoundCloud .Square{
-  height: 200px;
-  width: 200px;
-  background-color: #edf6f9;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor:pointer;
+.Discord {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.Discord .Square{
-  height: 200px;
-  width: 200px;
-  background-color: #5865F2;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor:pointer;
+.Twitter {
+    color: #1d9bf0;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.SoundCloud .Square {
+    height: 200px;
+    width: 200px;
+    background-color: #edf6f9;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
-.Twitter .Square{
-  height: 200px;
-  width: 200px;
-  background-color: #1d9bf0;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-  align-items: center;
-  justify-content: space-evenly;
-  cursor:pointer;
+.Discord .Square {
+    height: 200px;
+    width: 200px;
+    background-color: #5865f2;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
-.Square + p:hover{
-  
-  text-decoration: underline;
+.Twitter .Square {
+    height: 200px;
+    width: 200px;
+    background-color: #1d9bf0;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
 }
 
-#copy{
-  opacity: 0;
+.Square + p:hover {
+    text-decoration: underline;
 }
 
-button{
-  display: block;
+#copy {
+    opacity: 0;
 }
- .main img{
-  height: 100px;
+
+button {
+    display: block;
 }
-#copyButton{
-  font-size: 25px;
-  margin:10px;
+.main img {
+    height: 100px;
+}
+#copyButton {
+    font-size: 25px;
+    margin: 10px;
 }
 #examplePre::selection {
-  background: inherit;
+    background: inherit;
 }
 
 #examplePre::-moz-selection {
-  background: inherit; /* Gecko Browsers */
+    background: inherit; /* Gecko Browsers */
 }
 
-.discord-text:hover{
-  text-decoration: underline;
-  cursor:pointer;
+.discord-text:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
-#succesMsg{
-    font-size:30px;
-    margin:100px;
+#succesMsg {
+    font-size: 30px;
+    margin: 100px;
 }
-button, input[type="submit"], input[type="reset"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+button,
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
-  footer{
+footer {
     border-top: 5px solid;
     border-color: #83c5be;
     background: #32373b;
-    color:#edf6f9;
+    color: #edf6f9;
     display: flex;
     flex-grow: inherit;
+    float: bottom;
 
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; 
-  }
-  
-  footer h1{
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+footer h1 {
     color: #c83e4d;
     font-family: "Acka";
     font-size: 150px;
@@ -238,22 +244,22 @@ button, input[type="submit"], input[type="reset"] {
     padding: 0px;
     padding-top: 20px;
     padding-left: 20px;
-  }
-  
-  footer ul{
+}
+
+footer ul {
     float: right;
     color: #c5c6c7;
     padding-right: 10px;
     list-style: none;
     font-family: "Cuprum";
     font-size: 35px;
-  }
-  
-  footer li:hover{
+}
+
+footer li:hover {
     text-decoration: underline;
-  }
-  
-  #copyright{
+}
+
+#copyright {
     color: #c5c6c7;
     text-align: center;
     vertical-align: middle;
@@ -261,13 +267,9 @@ button, input[type="submit"], input[type="reset"] {
     flex-grow: 2;
     align-self: flex-end;
     font-size: 20px;
-  }
-  
-  @font-face {
+}
+
+@font-face {
     font-family: Acka;
     src: url("/fonts/Acakadut-JRZnK.otf") format("opentype");
-  }
-
-  
-
-
+}

@@ -2,55 +2,68 @@
 layout: default
 title: Varniro's
 ---
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>Social Links</title>
-    <link rel="stylesheet" href="Stylesheets/Socials_Stylesheet.css">
-  </head>
+    <head>
+        <title>Social Links</title>
+        <link rel="stylesheet" href="Stylesheets/Socials_Stylesheet.css" />
+    </head>
 
-  <body>
-    <ul id = "navbar">
-      <li id = "HomeNav"><a href="index.html">Home</a></li>
-      <li id = "SocialsNav"><a href="Socials.html">Socials</a></li>
-      <li id = "GalleryNav"><a href="Gallery.html">Gallery</a></li>
-  </ul>
-  <h1>Stay in Touch!</h1>
-  <div class = "main">
-   
-    <div class = "SoundCloud">
-      Listen to my music on
-      <a href="https://soundcloud.com/varniro">
-        <div class = "Square"><img src="images/soundcloud.svg" alt=""></div>
-      </a>
-    </div>
+    <body>
+        <div style="display: flex; flex-direction:column">
+            <ul id="navbar">
+                <li id="HomeNav"><a href="index.html">Home</a></li>
+                <li id="SocialsNav"><a href="Socials.html">Socials</a></li>
+                <li id="GalleryNav"><a href="Gallery.html">Gallery</a></li>
+            </ul>
+            <h1>Stay in Touch!</h1>
+            <div class="main">
+                <div class="SoundCloud">
+                    Listen to my music on
+                    <a href="https://soundcloud.com/varniro">
+                        <div class="Square">
+                            <img src="images/soundcloud.svg" alt="" />
+                        </div>
+                    </a>
+                </div>
 
-    <div class = "Discord">
-      Send me a friend request on
-      <div class = "Square" onclick="copy('Varniro#3606')"><img src="images/Discord-Logo-White.svg" alt=""></div>
-      <span class="discord-text" onclick="copy('Varniro#3606')">Add "<span id="examplePre">Varniro#3606</span>" as a friend on Discord</span>
-      <span id="copy">C</span>
-    </div>
+                <div class="Discord">
+                    Send me a friend request on
+                    <div class="Square" onclick="copy('Varniro#3606')">
+                        <img src="images/Discord-Logo-White.svg" alt="" />
+                    </div>
+                    <span class="discord-text" onclick="copy('Varniro#3606')"
+                        >Add "<span id="examplePre">Varniro#3606</span>" as a
+                        friend on Discord</span
+                    >
+                    <span id="copy">C</span>
+                </div>
 
-    <div class = "Twitter">
-      Follow me on
-      <a href="https://twitter.com/varniro">
-        <div class = "Square"><img src="images/Twitter logo/SVG/Logo white.svg" alt=""></div>
-      </a>
-    </div>
-  </div>
-    <footer>
-      <h1>V's</h1>
-      <div id = "copyright">©2021 Varniro. All Rights Reserved.</div>
-      <ul>
-        <li><a href="https://twitter.com/varniro">Twitter</a></li>
-        <li><a href="https://soundcloud.com/varniro">SoundCloud</a> </li>
-      </ul>
-      
-    </footer>
-    
-  </body>
-  
-  <script src="Javascripts/copy.js"></script>
+                <div class="Twitter">
+                    Follow me on
+                    <a href="https://twitter.com/varniro">
+                        <div class="Square">
+                            <img
+                                src="images/Twitter logo/SVG/Logo white.svg"
+                                alt=""
+                            />
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <footer>
+                <h1>V's</h1>
+                <div id="copyright">©2021 Varniro. All Rights Reserved.</div>
+                <ul>
+                    <li><a href="https://twitter.com/varniro">Twitter</a></li>
+                    <li>
+                        <a href="https://soundcloud.com/varniro">SoundCloud</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </body>
 
+    <script src="Javascripts/copy.js"></script>
 </html>
